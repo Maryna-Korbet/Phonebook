@@ -1,18 +1,11 @@
-.list {
-    width: 450px;
+.wrapper {
     display: flex;
-    flex-direction: column;
-    padding: 10px 20px;
-    border: 1px solid #2a363b;
-    border-radius: 4px;
-    margin-bottom: 5px;
+    align-items: center;
+    gap: 12px;
 }
 
-.info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    margin: 5px 0px;
+.username {
+    font-weight: 700;
 }
 
 button {
@@ -35,4 +28,3 @@ button:hover {
 button:active {
     background: #d3d3d3;
 }
-

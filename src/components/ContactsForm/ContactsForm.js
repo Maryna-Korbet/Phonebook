@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { selectContacts } from 'redux/selector';
-import { addСontact } from "redux/operations";
+import { selectContacts } from 'redux/contacts/selectors';
+import { addСontact } from "redux/contacts/operations";
 import css from "components/ContactsForm/ContactsForm.module.css";
 
 export function ContactsForm () {
     const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
+    const [number, setNumber] = useState('');
     const contacts = useSelector(selectContacts);
     const dispatch = useDispatch();
 
@@ -16,8 +16,8 @@ export function ContactsForm () {
             case 'name':
                 setName(value);
                 break;
-            case 'phone':
-                setPhone(value);
+            case 'number':
+                setNumber(value);
                 break;
             default:
                 return;
@@ -28,16 +28,16 @@ export function ContactsForm () {
         e.preventDefault();
         
         contacts.some(contact => 
-            contact.name.toLowerCase() === name.toLowerCase() || contact.phone === phone)
+            contact.name.toLowerCase() === name.toLowerCase() || contact.number === number)
             ? alert(`Such a name or number was added to the phone book earlier.`)
-            : dispatch(addСontact({name, phone}));
+            : dispatch(addСontact({name, number}));
     
         onReset();
     };
 
     const onReset = () => {
         setName('');
-        setPhone('');
+        setNumber('');
     };
 
     return (
@@ -59,8 +59,8 @@ export function ContactsForm () {
                 <p className={css.title}>Number</p>
                 <input
                     type="tel"
-                    name="phone"
-                    value={phone}
+                    name="number"
+                    value={number}
                     onChange={handleChange}
                     pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                     title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
@@ -69,9 +69,7 @@ export function ContactsForm () {
             </label>
             
             <button type="submit" className={css.button}>Add contact</button>
-            </form>
+        </form>
     );
-    }
-
-
+}
 

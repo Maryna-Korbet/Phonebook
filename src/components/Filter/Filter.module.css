@@ -1,11 +1,11 @@
 input {
-    border: 1px solid #007FFF;
+    border: 1px solid #2a363b;
     border-radius: 4px;
-    font-size: 20px;
+    font-size: 10px;
     resize: none;
 }
 
 .title {
-    font-size: 20px;
+    font-size: 15px;
     margin: 5px 0px;
 }
