@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkphonebook=self.webpackChunkphonebook||[]).push([[266],{266:function(e,n,t){t.r(n),t.d(n,{default:function(){return i}});var o=t(184),c={container:{minHeight:"calc(100vh - 50px)",display:"flex",alignItems:"center",justifyContent:"center"},title:{fontWeight:500,fontSize:48,textAlign:"center"}};function i(){return(0,o.jsxs)("div",{style:c.container,children:[(0,o.jsx)("h1",{style:c.title,children:"Welcome to Phonebook!"}),(0,o.jsx)("p",{children:"create your own personabook of contacts"})]})}}}]);
+//# sourceMappingURL=266.b745d64a.chunk.js.map
