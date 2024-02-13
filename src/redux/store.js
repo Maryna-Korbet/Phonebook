@@ -17,6 +17,7 @@ import { authReducer } from './auth/authSlice';
 const authPersistConfig = {
   key: 'auth',
   storage,
+  blacklist: [ 'user', 'isLoggedIn', 'isRefreshing', '_persist'],
   whitelist: ['token'],
 };
 
@@ -32,7 +33,6 @@ export const store = configureStore({
           ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-    // devTools: process.env.NODE_ENV === 'development',
 });
 
 export const persistor = persistStore(store);
