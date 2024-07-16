@@ -16,6 +16,7 @@ export const Filter = () => {
       <p className={css.title}>Find contacts by name</p>
         <input
           type="text"
+          id="filter"
           name="filter"
           value={filter}
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"

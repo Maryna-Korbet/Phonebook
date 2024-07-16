@@ -7,13 +7,13 @@ import css from "components/Layout/Layout.module.css";
 export const Layout = () => {
     return (
         <div className={css.container}>
-        <div  className={css.bar}>
-            <AppBar />
+            <div className={css.bar}>
+                <AppBar />
                 <Suspense fallback={null}>
-            <Outlet />
-            </Suspense>
-            <Toaster position="top-right" reverseOrder={false} />
-        </div>
+                    <Outlet />
+                </Suspense>
+                <Toaster position="top-right" reverseOrder={false} />
+            </div>
         </div>
     );
 }

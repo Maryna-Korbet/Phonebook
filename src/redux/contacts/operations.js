@@ -1,7 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
+const { REACT_APP_API_URL } = process.env;
+
+axios.defaults.baseURL = REACT_APP_API_URL;
 
 const ERROR_MESSAGE = 'Error. Request failed.';
 
